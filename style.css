@@ -80,6 +80,7 @@ img{
 }
 
 .btn{
+    display: inline-block;
     background: var(--color-white);
     color: var(--color-black);
     padding: 1rem 2rem;
@@ -111,7 +112,7 @@ nav{
 }
 
 .nav__container{
-    height: 5rem;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -135,4 +136,26 @@ nav button{
 .nav__menu a:hover{
     color: var(--color-bg2);
 }
+/* END OF NAV SECTION */
 
+/* HEADER SECTION */
+header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+
+.header__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.header__left p{
+    margin: 1rem 0 2.4rem;
+}
+/* END OF HEADER SECTION */
