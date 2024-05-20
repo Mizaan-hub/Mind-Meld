@@ -35,14 +35,14 @@ const show = document.querySelector(".avatar-popup");
 avatars.forEach(avatar => {
     avatar.addEventListener('click', (event) => {
 
-        if(show.className != 'show'){
-            const avatarPopup = event.target.parentElement.nextElementSibling;
-            avatarPopup.classList.toggle("show");
-            console.log("Aye you naughty you wanna see her :)")
+        const avatarPopup = event.target.parentElement.nextElementSibling;
+        avatarPopup.classList.toggle("show");
+        console.log("Aye you naughty you wanna see her :)")
+        const avatarBlur = event.target.parentElement;
+        avatarBlur.classList.toggle('blur');
 
-            const avatarBlur = event.target.parentElement;
-            avatarBlur.classList.toggle('blur');
-        }
+        console.log(avatar.src)
+        console.log("Awww don't worry you can see her right above here👆")
     })
 });
 
