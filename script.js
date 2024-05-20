@@ -1,5 +1,6 @@
 // NAV BAR SCROLL CHANGE
 window.addEventListener('scroll', () => {
+    console.log("Aye you finally scrolled 🫸🔵🔴🫷🫴🟣");
     document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0)
 })
 
@@ -15,6 +16,7 @@ faqs.forEach(faq => {
         // change icon
         const icon = faq.querySelector('.faq__icon i');
         if (icon.className === 'uil uil-plus') {
+            console.log("FUGA 💀🏯💀 🫸⛩️🫷 ");
             icon.className = "uil uil-minus";
         }
         else{
@@ -22,3 +24,14 @@ faqs.forEach(faq => {
         }
     })
 });
+
+// Select the avatar images
+const avatars = document.querySelectorAll(".avatar");
+
+// Loop through the avatar images and add an event listener to each one
+avatars.forEach(avatar => {
+    avatar.addEventListener("click", function() {
+      console.log(this.src);
+    }.bind(avatar));
+  });
+
