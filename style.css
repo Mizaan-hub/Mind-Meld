@@ -336,6 +336,7 @@ header{
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto 1rem;
+    cursor: pointer;
     border: 1rem solid var(--color-bg1);
 }
 
@@ -540,4 +541,16 @@ footer ul li a:hover{
     .categories__left{
         margin-right: 0;
     }
+
+    /* COURSES */
+
+    .courses{
+        margin-top: 0;
+    }
+
+    .courses__container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* FAQ's */
 }
