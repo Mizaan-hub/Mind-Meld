@@ -9,6 +9,9 @@
     <!-- ICONS SCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
 
+    <!-- SWIPER JS CND -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <!-- FONTS (MONTSERRAT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -252,10 +255,10 @@
     <!-- FAQ's END -->
 
     <!-- TESTIMONIALS -->
-    <section class="container testimonials__container">
+    <section class="container testimonials__container mySwiper">
         <h2>Student's Testimonials</h2>
-        <div>
-            <article class="testimonial">
+        <div class="swiper-wrapper">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./assets/pics/sydney-2.webp">
                 </div>
@@ -268,7 +271,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./assets/pics/eva-4.jpg">
                 </div>
@@ -281,7 +284,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./assets/pics/beer-3.jpg">
                 </div>
@@ -294,7 +297,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./assets/pics/alex-1.jpg">
                 </div>
@@ -307,7 +310,7 @@
                 </div>
             </article>
 
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./assets/pics/mommy-3.jpg">
                 </div>
@@ -320,10 +323,32 @@
                 </div>
             </article>
         </div>
+        <div class="swiper-pagination"></div>
     </section>
     <!-- TESTIMONIALS END -->
 
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="./script.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          //when window > 600px
+          breakpoints:{
+                600: {
+                    slidesPerView: 2
+                }
+            },
+        });
+      </script>
 </body>
 
 </html>
