@@ -39,8 +39,6 @@ avatars.forEach(avatar => {
             const avatarPopup = event.target.parentElement.nextElementSibling;
             avatarPopup.classList.toggle("show");
             console.log("Aye you naughty you wanna see her :)")
-            console.log(avatar.src)
-            console.log("Awww don't worry you can see her right above here👆")
 
             const avatarBlur = event.target.parentElement;
             avatarBlur.classList.toggle('blur');
