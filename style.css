@@ -407,6 +407,22 @@ footer ul li a:hover{
 }
 /* END OF FOOTER */
 
+/* AVATAR SHOW HIDE */
+.avatar-popup {
+    display: none;
+    z-index: 1000;
+    margin-bottom: 1rem;
+  }
+
+  .avatar-popup.show {
+    display: block;
+  }
+
+  .blur {
+    filter: blur(5px);
+  }
+/* AVATAR SHOW HIDE END */
+
 /* MEDIA QUERIES FOR TABLETS */
 @media screen and (max-width: 1024px) {
 

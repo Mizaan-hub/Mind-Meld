@@ -25,13 +25,34 @@ faqs.forEach(faq => {
     })
 });
 
-// Select the avatar images
-const avatars = document.querySelectorAll(".avatar");
 
-// Loop through the avatar images and add an event listener to each one
+// SHOW HIDE AVATARS
+
+const avatars = document.querySelectorAll(".avatar img");
+const show = document.querySelector(".avatar-popup");
+
+
 avatars.forEach(avatar => {
-    avatar.addEventListener("click", function() {
-      console.log(this.src);
-    }.bind(avatar));
-  });
+    avatar.addEventListener('click', (event) => {
 
+        if(show.className != 'show'){
+            const avatarPopup = event.target.parentElement.nextElementSibling;
+            avatarPopup.classList.toggle("show");
+            console.log("Aye you naughty you wanna see her :)")
+            console.log(avatar.src)
+            console.log("Awww don't worry you can see her right above here👆")
+
+            const avatarBlur = event.target.parentElement;
+            avatarBlur.classList.toggle('blur');
+        }
+    })
+});
+
+// SHOW HIDE AVATARS END
+
+// SHOW/HIDE NAV MENU
+const menu = document.querySelector(".nav__menu");
+const openBtn = document.querySelector("#open-meu-btn");
+const closeBtn = document.querySelector("#close-meu-btn");
+
+// SHOW/HIDE NAV MENU END
