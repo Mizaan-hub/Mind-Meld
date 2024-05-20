@@ -50,7 +50,20 @@ avatars.forEach(avatar => {
 
 // SHOW/HIDE NAV MENU
 const menu = document.querySelector(".nav__menu");
-const openBtn = document.querySelector("#open-meu-btn");
-const closeBtn = document.querySelector("#close-meu-btn");
+const openBtn = document.querySelector("#open-menu-btn");
+const closeBtn = document.querySelector("#close-menu-btn");
 
+ openBtn.addEventListener('click', () =>{
+    menu.style.display = "flex";
+    console.log("OPENING MENU DUCK DOWN");
+    closeBtn.style.display = "inline-block";
+    openBtn.style.display = "none";
+
+    closeBtn.addEventListener('click', () => {
+        menu.style.display = "none";
+        console.log("CLOSING MENU NOW YOU ARE SAFE MY POOKIE");
+        openBtn.style.display = "inline-block";
+        closeBtn.style.display = "none";
+    })
+ })
 // SHOW/HIDE NAV MENU END
