@@ -493,10 +493,10 @@ footer ul li a:hover{
 
     @keyframes NavItems{
         0%{
-            transform: rotateZ(-90deg) rotateX(90deg) scale(0.5);
+            transform: rotateY(-180deg) rotateX(180deg) rotateZ(-180deg) scale(0.5);
         }
         100%{
-            transform: rotateZ(0) rotateX(0) scale(1);
+            transform: rotateY(0) rotateX(0) rotateX(0) scale(1);
             opacity: 1;
         }
     }
