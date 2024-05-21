@@ -569,3 +569,7 @@ footer ul li a:hover{
     }
 }
 
+/* MEDIA QUERIES FOR MOBILES */
+@media screen and (max-width: 600px) {
+   
+}
