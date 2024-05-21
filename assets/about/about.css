@@ -128,4 +128,48 @@
 
 /* END FOR TEAM */
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES FOR TABLET */
+@media screen and (max-width: 1024px) {
+    .achievements{
+        margin-top: 2rem;
+    }
+
+    .achievements__container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .achievements__left{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .teams__container{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5rem;
+    }
+
+    .team{
+        padding: 1rem;
+    }
+}
+
+/* MEDIA QUERIES FOR MOBILE */
+@media screen and (max-width: 600px) {
+    .achievements__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .teams__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team{
+        padding: 0;
+    }
+
+    .team p{
+        margin-bottom: 1.5rem;
+    }
+}
