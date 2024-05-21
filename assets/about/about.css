@@ -62,5 +62,70 @@
 /* END FOR ACHIEVEMENTS */
 
 /* TEAM */
+.teams{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0,0,0,0.5) ;
+}
+
+.teams__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team{
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.team:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team__img img{
+    filter: saturate(0);
+}
+
+.team__img:hover img{
+    filter: saturate(1);
+}
+
+.team__info *{
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team__info p{
+    color: var(--color-light);
+}
+
+.team__socials{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: -2rem 0 2rem rgba(0,0,0,0.3);
+    transition: var(--transition);
+}
+
+.team:hover .team__socials{
+    left: 0;
+}
+
+.team__socials a{
+    padding: 1rem;
+}
+
 
 /* END FOR TEAM */
+
+/* MEDIA QUERIES */
