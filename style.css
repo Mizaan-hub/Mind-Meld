@@ -134,6 +134,48 @@ nav button{
     gap: 4rem;
 }
 
+.nav__profile{
+    position: relative;
+    cursor: pointer;
+}
+
+.profile__avatar{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.3rem solid var(--color-bg);
+}
+
+.nav__profile ul{
+    position: absolute;
+    top: 125%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.nav__profile:hover > ul{
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav__profile ul li a{
+    padding: 1rem;
+    background: var(--color-primary);
+    display: block;
+    width: 100%;
+}
+
+.nav__profile ul li:last-child:hover a{
+    background: var(--color-danger);
+    color: var(--color-bg);
+}
+
 .nav__menu a{
     font-size: 0.9rem;
     transition: var(--transition);
@@ -337,7 +379,7 @@ header{
     overflow: hidden;
     margin: 0 auto 1rem;
     cursor: pointer;
-    border: 1rem solid var(--color-bg1);
+    border: 0.3rem solid var(--color-bg1);
 }
 
 .testimonial__info{
@@ -490,6 +532,10 @@ footer ul li a:hover{
 
     .nav__menu li:nth-child(4){
         animation-delay: 600ms;
+    }
+
+    .nav__menu li:nth-child(5){
+        animation-delay: 800ms;
     }
 
     @keyframes NavItems{
