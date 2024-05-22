@@ -101,3 +101,14 @@ for (let i = 0; i < 80; i++) {
   // Append the course element to the container element
   container.appendChild(course);
 }
+
+//...
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const course = this.closest('.course');
+    const imageSrc = course.querySelector('.course__img img').src;
+    const title = course.querySelector('.course__info h4').textContent;
+    sessionStorage.setItem('imageSrc', imageSrc);
+    sessionStorage.setItem('title', title);
+  });
+});
