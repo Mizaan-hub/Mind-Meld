@@ -22,17 +22,7 @@
     <link rel="stylesheet" href="/Mind-Meld/style.css">
 
     <style>
-        .form_section__container {width: 80%;}
-
-        select {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url('../pics/angle-down.svg');
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 16px 16px;
-          }
+        .form_section__container {width: 60%;}
 
         /* Media Query for tablet*/
         @media screen and (max-width: 1024px) {
@@ -74,29 +64,20 @@
 <section class="form_section">
     <div class="container form_section__container">
 
-        <h2>Add Team Member</h2>
+        <h2>Edit Course</h2>
 
         <div class="alert__message error">
             <p>This is an error message</p>
         </div>
 
         <form action="" enctype="multipart/form-data">
-            <select>
-                <option value="1">Mr.</option>
-                <option value="1">Ms.</option>
-                <option value="1">Mrs.</option>
-                <option value="1">Dr.</option>
-                <option value="1">Prof.</option>
-            </select>
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="text" placeholder="UserName">
-            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Course Title" required>
+            <textarea rows="5" placeholder="Course Description"></textarea>
             <div class="form__control">
-                <label for="avatar">Member Avatar</label>
-                <input type="file" id="avatar" required>
+                <label for="thumbnail">Course Thumbnail</label>
+                <input type="file" id="thumbnail" required>
             </div>
-            <button type="submit" class="btn-alt">Add To Team</button>
+            <button type="submit" class="btn-alt">Update Course</button>
         </form>
     </div>
 </section>
