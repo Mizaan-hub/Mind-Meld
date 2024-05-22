@@ -1,0 +1,34 @@
+section{
+    margin-top: 4rem;
+}
+
+.thisCourse{
+    margin: 2rem 0 2rem;
+}
+
+.thisCourse__container{
+    width: 40%;
+}
+
+.course{
+    padding: 1rem 2rem 2rem;
+}
+
+.course P{
+    margin-top: 1rem;
+    line-height: 1.7;
+}
+
+/* MEDIA QUERIES FOR TABLET */
+@media screen and (max-width: 1024px){
+    .thisCourse__container{
+        width: 80%;
+    }
+}
+
+/* MEDIA QUERIES FOR MOBILE */
+@media screen and (max-width: 600px){
+    .thisCourse__container{
+        width: 90%;
+    }
+}

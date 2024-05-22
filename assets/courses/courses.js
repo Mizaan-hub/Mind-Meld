@@ -87,7 +87,7 @@ for (let i = 0; i < 80; i++) {
   const a = document.createElement("a");
   a.classList.add("btn", "btn-primary");
   a.textContent = "Learn More";
-  a.href = "./courses.html";
+  a.href = "../thiscourse/thiscourse.html";
 
   // Append the elements to the course__info element
   courseInfo.appendChild(h4);
