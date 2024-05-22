@@ -121,6 +121,16 @@ img{
     color: var(--color-white);
 }
 
+.btn-alt.sm{
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.btn-alt.danger{
+    /* padding: 0.3rem 0.7rem;
+    font-size: 0.8rem; */
+    background: var(--color-danger); 
+}
 /* NAVBAR */
 
 nav{
@@ -561,6 +571,10 @@ input, textarea , select{
     font-weight: 600;
 }
 /* GENERAL FORM END */
+
+/* DASHBOARD */
+
+/* DASHBOARD END */
 
 /* MEDIA QUERIES FOR TABLETS */
 @media screen and (max-width: 1024px) {
