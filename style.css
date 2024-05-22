@@ -13,7 +13,8 @@
     --color-success: #00bf8e;
     --color-warning:#f7c94b;
     --color-danger: #f75842;
-    --color-danger-variant: rgba(247,88,66,0.4);
+    --color-danger-variant: rgba(245,90,65,0.2);
+    --color-success-variant: rgba(45, 255, 0, 0.2);
     --color-white: #fff;
     --color-black: #000;
     --color-light: rgba(255,255,255,0.7);
@@ -24,6 +25,7 @@
     --container-width-lg: 80%;
     --container-width-md: 90%;
     --container-width-sm: 94%;
+    --form-width: 40%
 
     --transition: all 400ms ease;
 }
@@ -97,6 +99,25 @@ img{
 
 .btn-primary{
     background: var(--color-danger);
+    color: var(--color-white);
+}
+
+.btn-alt{
+    background: var(--color-primary);
+    color: var(--color-bg1);
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 1rem;
+}
+
+.btn-alt:hover{
     color: var(--color-white);
 }
 
@@ -465,6 +486,81 @@ footer ul li a:hover{
     filter: blur(5px);
   }
 /* AVATAR SHOW HIDE END */
+
+/* GENERAL FORM */
+.form_section{
+    margin-top: -2rem;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.form_section__container{
+    width: var(--form-width);
+}
+
+.form_section__container h2{
+    text-align: left;
+    margin-left: 0.8rem;
+}
+
+.alert__message{
+    padding: 0.8rem 1rem;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.alert__message.error{
+    background-color: var(--color-danger-variant);
+    color: var(--color-danger);
+}
+
+.alert__message.success{
+    background-color: var(--color-success-variant);
+    color: var(--color-success);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__control{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form__control label{
+    margin-left: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+input, textarea , select{
+    padding: 0.8rem 1.4rem;
+    background: var(--color-bg1);
+    border-radius: 0.5rem;
+    resize: none;
+    color: var(--color-white);
+}
+
+.form_section small{
+    margin-top: 1rem;
+    display: block;
+}
+
+.form_section small a{
+    color: var(--color-primary);
+}
+
+.form_section small a:hover{
+    text-decoration: underline;
+    color: var(--color-success);
+    font-weight: 600;
+}
+/* GENERAL FORM END */
 
 /* MEDIA QUERIES FOR TABLETS */
 @media screen and (max-width: 1024px) {
