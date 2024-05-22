@@ -780,4 +780,17 @@ input, textarea , select{
    .footer__socials{
     justify-content: center;
    }
+
+   /* GENERAL FORM */
+   .form_section{
+        margin-top: 2rem;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+    }
+
+    .form_section__container{
+        width: 80%;
+    }
+   /* GENERAL FORM END */
 }
