@@ -1,7 +1,7 @@
 window.onload = function() {
     const imageSrc = sessionStorage.getItem('imageSrc');
     const title = sessionStorage.getItem('title');
-    const thisCourse = document.querySelector('.thisCourse');
+    const thisCourse = document.querySelector('.thisCourse__container');
     const newCourse = document.createElement('article');
     newCourse.className = 'course';
     newCourse.innerHTML = `
