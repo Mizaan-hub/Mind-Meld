@@ -184,14 +184,14 @@ nav button{
 
 .nav__profile ul{
     position: absolute;
-    top: 125%;
+    top: 115%;
     right: 0;
     display: flex;
     flex-direction: column;
     box-shadow: 0 3rem 3rem rgba(0,0,0,0.4);
     visibility: hidden;
     opacity: 0;
-    transition: var(--transition);
+    transition: 800ms ease;
 }
 
 .nav__profile:hover > ul{
