@@ -21,6 +21,10 @@
     --color-bg: #1f2641;
     --color-bg1: #2e3267;
     --color-bg2: #424890;
+    --color-gray-900: #1e1e66;
+    --color-gray-700: #2d2b7c;
+    --color-gray-300: rgba(242,242,254,0.3);
+    --color-gray-200: rgba(242,242,252,0.7);
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
@@ -114,7 +118,7 @@ img{
     text-align: center;
     cursor: pointer;
     transition: var(--transition);
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 
 .btn-alt:hover{
@@ -573,7 +577,72 @@ input, textarea , select{
 /* GENERAL FORM END */
 
 /* DASHBOARD */
+.dashboard{
+    margin-top: 6rem;
+}
 
+.dashboard__container{
+    display: grid;
+    grid-template-columns: 14rem auto;
+    gap: 1rem;
+    background: var(--color-gray-900);
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.dashboard__container .sidebar__toggle{
+    display: none;
+}
+
+.dashboard aside a{
+    background: var(--color-primary);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.6rem; 
+}
+
+.dashboard aside ul li:not(:last-child) a{
+    border-bottom: 1px solid var(--color-gray-900);
+}
+
+.dashboard aside a:hover{
+    background: var(--color-gray-700);
+}
+
+.dashboard aside a.active{
+    background: var(--color-gray-900);
+}
+
+.dashboard main{
+    margin-left: 2rem;
+}
+
+.dashboard main h2{
+    margin-top: -0.6rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard main table{
+    width: 100%;
+    text-align: left;
+}
+
+.dashboard main table th{
+    background: var(--color-gray-700);
+    padding: 0.8rem;
+}
+
+.dashboard main table td{
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.dashboard main table tr:hover td{
+    background: var(--color-bg);
+    cursor: default;
+    transition: var(--transition);
+}
 /* DASHBOARD END */
 
 /* MEDIA QUERIES FOR TABLETS */
@@ -723,6 +792,43 @@ input, textarea , select{
     .footer__container{
         grid-template-columns: 1fr 1fr;
     }
+
+    /* DASHBOARD */
+
+    .dashboard__container{
+        grid-template-columns: 4.5rem auto;
+        padding: 0;
+        background: transparent;
+    }
+    
+    .dashboard aside h5{
+        display: none;
+    }
+
+    .dashboard main{
+        margin-left: 1rem;
+    }
+
+    .dashboard main h2{
+        margin-top: 1.8rem;
+    }
+
+    .dashboard main table thead{
+        display: none;
+    }
+
+    .dashboard main table tr{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard main table tr:hover td{
+        background: transparent;
+    }
+
+    .dashboard main table tr:nth-child(even){
+        background: var(--color-gray-900);
+    }
 }
 
 /* MEDIA QUERIES FOR MOBILES */
@@ -807,4 +913,58 @@ input, textarea , select{
         width: 80%;
     }
    /* GENERAL FORM END */
+
+   /* DASHBOARD */
+
+    .dashboard{
+        margin-top: -1rem;
+    }
+
+    .dashboard__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .dashboard main{
+        margin: 0;
+    }
+
+    .dashboard main h2{
+        margin-top: 1rem;
+    }
+
+    .dashboard aside{
+        position: fixed;
+        box-shadow: 2rem 0 4rem rgba(0,0,0,0.4);
+        left: -100%;
+        height: 100vh;
+        transition: var(--transition);
+        background: var(--color-primary);
+    }
+
+    .dashboard__container .sidebar__toggle{
+        display: inline-block;
+        background: var(--color-primary);
+        color: var(--color-white);
+        position: fixed;
+        z-index: 1;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50% 0 0 50%;
+        right: 0;
+        bottom: 4rem;
+        font-size: 1.4rem;
+        cursor: pointer;
+        box-shadow: -1rem 0 2rem rgba(0,0,0,0.4);
+        transition: var(--transition);
+    }
+
+    .dashboard aside h5{
+        display: inline-block;
+    }
+
+    #hide{
+        display: none;
+    }
+   
 }

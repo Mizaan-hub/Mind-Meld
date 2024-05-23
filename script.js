@@ -67,3 +67,25 @@ const closeBtn = document.querySelector("#close-menu-btn");
     })
  })
 // SHOW/HIDE NAV MENU END
+
+// ASIDE TOGGLE FOR MOBILES
+const sidebar = document.querySelector('aside');
+const show_btn = document.querySelector('#show');
+const hide_btn = document.querySelector("#hide");
+
+const showSidebar = () =>{
+    sidebar.style.left = '0';
+    show_btn.style.display = 'none';
+    hide_btn.style.display = 'inline-block';
+}
+
+const hideSidebar = () =>{
+    sidebar.style.left = '-100%';
+    hide_btn.style.display = 'none';
+    show_btn.style.display = 'inline-block';
+}
+
+show_btn.addEventListener('click',showSidebar)
+
+hide_btn.addEventListener('click',hideSidebar);
+// END OF ASIDE TOGGLE FOR MOBILES
